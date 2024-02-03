@@ -8,7 +8,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { redirect } from "next/navigation";
 import UserTabs from '@/components/layout/UserTabs';
 
-export default function page() {
+export default function Page() {
     const session = useSession();
 
     const [user, setUser] = useState(null);

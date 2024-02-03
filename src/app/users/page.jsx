@@ -5,7 +5,7 @@ import UserTabs from '@/components/layout/UserTabs'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 
-export default function page() {
+export default function Page() {
     const { data: profileData, adminInfoLoading: loading } = UseProfile()
     const [users, setUsers] = useState([])
 

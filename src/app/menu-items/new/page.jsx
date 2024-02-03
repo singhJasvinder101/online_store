@@ -9,7 +9,7 @@ import React, { useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast';
 import { redirect } from "next/navigation";
 
-export default function page() {
+export default function Page() {
     const { data: profileData, adminInfoLoading: loading } = UseProfile()
     const [redirectToItems, setRedirectToItems] = useState(false);
 

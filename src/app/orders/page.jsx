@@ -6,7 +6,7 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { Toaster } from 'react-hot-toast'
 
-export default function page() {
+export default function Page() {
   const [orders, setOrders] = useState([]);
   const [loadingOrders, setLoadingOrders] = useState(true);
   const { data: profileData, adminInfoLoading: loading } = UseProfile()

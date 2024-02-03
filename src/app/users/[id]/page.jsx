@@ -7,7 +7,7 @@ import { useParams } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast'
 
-export default function page() {
+export default function Page() {
     const { data: profileData, adminInfoLoading: loading } = UseProfile()
     const { id } = useParams()
     const [user, setUser] = useState()

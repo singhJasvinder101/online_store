@@ -8,7 +8,7 @@ import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast';
 
-export default function page() {
+export default function Page() {
     const { cartProducts, removeCartProduct } = useContext(CartContext);
     const [address, setAddress] = useState({});
     const { data: profileData } = UseProfile();

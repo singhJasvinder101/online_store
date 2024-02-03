@@ -7,7 +7,7 @@ import { useParams } from 'next/navigation'
 import CartProduct from '@/components/layout/CartProduuct'
 import UseProfile from '@/components/UseProfile'
 
-export default function page() {
+export default function Page() {
     const { clearCart } = useContext(CartContext)
     const [orderData, setOrderData] = useState()
     const [loadingOrder, setLoadingOrder] = useState(true);
