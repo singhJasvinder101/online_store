@@ -1,7 +1,11 @@
-import { Inter } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 import './globals.css'
+import Header from '@/components/layout/Header'
+import { SessionProvider } from 'next-auth/react'
+import AppContext from '@/components/AppContext'
 
-const inter = Inter({ subsets: ['latin'] })
+
+const roboto = Roboto({ subsets: ['latin'], weight: ['400', '500'] })
 
 export const metadata = {
   title: 'Create Next App',
@@ -10,8 +14,18 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className='scroll-smooth'>
+      <body className={`${roboto.className}`} >
+        <main className='max-w-6xl mx-auto border p-4'>
+          <AppContext>
+            <Header />
+            {children}
+            <footer className="border border-t-1 border-t-gray-500 text-center p-3 text-black mt-16">
+              &copy; 2023 All rights reserved
+            </footer>
+          </AppContext>
+        </main>
+      </body>
     </html>
   )
 }
