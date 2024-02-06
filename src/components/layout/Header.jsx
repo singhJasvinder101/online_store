@@ -41,6 +41,9 @@ export default function Header() {
     const userData = session.data?.user;
     let userName = userData?.name || userData?.email;
     const [mobileNavOpen, setMobileNavOpen] = useState(false);
+    const { cartProducts } = useContext(CartContext)
+
+
     if (userName && userName.includes(' ')) {
         userName = userName.split(' ')[0];
     }
@@ -50,7 +53,6 @@ export default function Header() {
         return null;
     }
 
-    const { cartProducts } = useContext(CartContext)
 
     return (
         <header>
