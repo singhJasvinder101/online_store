@@ -29,12 +29,12 @@ export default function AppContext({ children }) {
     // to initially fetch the setcartproducts we need to fetch from local
     // storage first 
     let ls;
-    ls = typeof window !== undefined ? window.localStorage : null
-
     useEffect(() => {
+        ls = typeof window !== undefined ? window.localStorage : null
+
         if (ls && ls.getItem('cart')) {
             setCartProducts(JSON.parse(ls.getItem('cart')))
-            console.log(JSON.parse(ls.getItem('cart')))
+            // console.log(JSON.parse(ls.getItem('cart')))
         }
     }, [])
 
