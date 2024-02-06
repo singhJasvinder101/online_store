@@ -85,7 +85,7 @@ export default function Page() {
                 </button>
                 <div className="text-center my-4 text-gray-500 border-t pt-4">
                     Existing account?{' '}
-                    <Link className="underline" href={'/login'}>Login here &raquo;</Link>
+                    <Link className="underline" href={'/login'}>Login here </Link>
                 </div>
             </form>
         </section>
